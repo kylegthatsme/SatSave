@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SatSave</string>
+    <string name="action_settings">Settings</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="satcheck">SatCheck</string>
+    <string name="reset">Reset</string>
+    <string name="accuracy_">"Accuracy "</string>
+    <string name="provider">Provider</string>
+    <string name="altitude">Altitude</string>
+    <string name="bearing">Bearing</string>
+    <string name="medium_text">Medium Text</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="red">red</string>
+    <string name="android">android</string>
+    <string name="app_info">App Info</string>
+    <string name="back_">"Back "</string>
+    <string name="info1">Kyle Gehrman \n\nDescription:\nSatSave is a utility that saves all the information a mobile device can aquaire pertaining to location. A user can save instances of locations and review them in a list format. If desired, the entire SQL table can be purged in the settings menu. \n\nAcknowledgements:\n1. Android Developer Package Manager Documentation\n2. http://developer.android.com/reference/android/content/pm/PackageManager.html\n3. http://stackoverflow.com/questions/15297840/populate-listview-from-arraylist-of-objectsoid
+http://stackoverflow.com/questions/2227292/how-to-get-latitude-and-longitude-of-the-mobiledevice-in-android</string>
+    <string name="info2">Kyle Gehrman 
+
+Description:
+SatCheck is an Android utility that is used to check if certain android location functions are working correctly. It can be used to determine the accuracy in a device’s current GPS connection. 
+
+Acknowledgements:
+1. Android Developer Location Documentation
+2. http://stackoverflow.com/questions/17519198/how-to-get-the-current-location-latitude-and-longitude-in-android
+3. http://stackoverflow.com/questions/2227292/how-to-get-latitude-and-longitude-of-the-mobiledevice-in-android</string>
+    <string name="title_activity_sat_db">SatDB</string>
+    <string name="title_activity_scsqlite_helper">SCSQLiteHelper</string>
+    <string name="title_activity_scsqlhelper">SCSQLHelper</string>
+    <string name="title_activity_sat_view">SatViewActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_instance_view">SatView</string>
+    <string name="saved_points">Saved Points</string>
+    <string name="save">Save</string>
+    <string name="my_saves">My Saves</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="delete_all_entries">Delete All Entries</string>
+    <string name="settings">Settings</string>
+
+</resources>

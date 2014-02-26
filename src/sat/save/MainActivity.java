@@ -1,5 +1,5 @@
 /**
- * @author kgehrma
+ * @author Kyle Gehrman 
  * 
  * This is the main activity for SatSave, A utility written by Kyle Gehrman 
  * to be used by android developers for determining the functionality of the location

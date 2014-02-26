@@ -1,6 +1,6 @@
 package sat.save;
 /**
- * @author kgehrma
+ * @author Kyle Gehrman 
  * 
  * SatInstance
  * 

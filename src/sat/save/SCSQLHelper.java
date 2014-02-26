@@ -1,6 +1,6 @@
 package sat.save;
 /**
- * @author kgehrma
+ * @author Kyle Gehrman 
  * 
  * SCSQLHelper
  * 
@@ -97,7 +97,7 @@ public class SCSQLHelper extends SQLiteOpenHelper {
     
     public void addSatInstance(SatInstance satinstance){
         //for logging
-    	Log.d("addBook", satinstance.toString()); 
+    	Log.d("addSAT-INSTANCE", satinstance.toString()); 
 
 		// 1. get reference to writable DB
 		SQLiteDatabase db = this.getWritableDatabase();

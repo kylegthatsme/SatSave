@@ -4,7 +4,9 @@ package sat.save;
  * 
  * Instance View
  * 
- * activity that displays a single instance from the db 
+ * : is an activity that displays a single sat instance.  It does this by 
+ * 		by retrieving a single sat instance from the SQL db and displaying
+ * 		it in its text views. 
  * 
  * All right reserved 2014
  * This program is free software: you can redistribute it and/or modify

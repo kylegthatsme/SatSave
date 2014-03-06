@@ -73,6 +73,7 @@ public final class R {
         public static final int back_=0x7f05000f;
         public static final int bearing=0x7f050009;
         public static final int delete_all_entries=0x7f05001c;
+        public static final int delete_this_entry=0x7f05001e;
         public static final int hello_world=0x7f050016;
         public static final int info1=0x7f050010;
         public static final int info2=0x7f050011;

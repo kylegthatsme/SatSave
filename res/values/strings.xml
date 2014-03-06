@@ -40,5 +40,6 @@ Acknowledgements:
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="delete_all_entries">Delete All Entries</string>
     <string name="settings">Settings</string>
+    <string name="delete_this_entry">Delete This Entry</string>
 
 </resources>

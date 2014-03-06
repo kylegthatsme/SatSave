@@ -70,7 +70,7 @@ public class SCSQLHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // SQL statement to create book table
+        // SQL statement to create instance table
         String CREATE_SAT_TABLE = "CREATE TABLE sat ( " +
                 "id INTEGER PRIMARY KEY autoincrement, " + 
                 "name TEXT, "+
@@ -88,10 +88,10 @@ public class SCSQLHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Drop older books table if existed
+        // Drop older instances table if existed
         db.execSQL("DROP TABLE IF EXISTS sat");
  
-        // create fresh books table
+        // create fresh instance table
         this.onCreate(db);
     }
     
@@ -185,14 +185,14 @@ public class SCSQLHelper extends SQLiteOpenHelper {
                  satinstance.setAltitude(Double.parseDouble(cursor.getString(7)));
                  satinstance.setBearing(Float.parseFloat(cursor.getString(8)));
   
-                // Add book to books
+                // Add instance
                 satInstanceList.add(satinstance);
             } while (cursor.moveToNext());
         }
   
         Log.d("getAll_SatInstance()", satInstanceList.toString());
   
-        // return books
+        // return instance
         return satInstanceList;
     }
     
@@ -203,14 +203,14 @@ public class SCSQLHelper extends SQLiteOpenHelper {
      
         // 2. create ContentValues to add key "column"/value
         ContentValues values = new ContentValues();
-        values.put("name", satinstance.getName()); // get title 
-        values.put("userid", satinstance.getUserId()); // get author
-        values.put("lat", satinstance.getLat()); // get title 
-        values.put("lng", satinstance.getLng()); // get title 
-        values.put("provider", satinstance.getProvider()); // get title 
-        values.put("accuracy", satinstance.getAccuracy()); // get title 
-        values.put("altitude", satinstance.getAltitude()); // get title 
-        values.put("bearing", satinstance.getBearing()); // get title 
+        values.put("name", satinstance.getName()); // get name 
+        values.put("userid", satinstance.getUserId()); // get userid
+        values.put("lat", satinstance.getLat()); // get lat
+        values.put("lng", satinstance.getLng()); // get lng
+        values.put("provider", satinstance.getProvider()); // get provider
+        values.put("accuracy", satinstance.getAccuracy()); // get accuracy
+        values.put("altitude", satinstance.getAltitude()); // get altitude
+        values.put("bearing", satinstance.getBearing()); // get bearing
         
      
         // 3. updating row

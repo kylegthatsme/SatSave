@@ -68,6 +68,7 @@ public class SatViewActivity extends Activity {
     	    }
     	});
 	}
+	
 	protected void onPause(Bundle savedInstanceState) {
 		list.clear();
 	}

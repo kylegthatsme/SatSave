@@ -24,6 +24,8 @@ package sat.save;
 
  *
  */
+import java.util.List;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -47,6 +49,7 @@ public class InstanceView extends Activity {
 	TextView AltitudeField;
 	TextView BearingField;
 	Button b_deleteThis;
+	List<SatInstance> list;
 	
     
 	SatInstance satinstance = new SatInstance();
@@ -63,7 +66,12 @@ public class InstanceView extends Activity {
 		int Id = mIntent.getIntExtra("InstanceSelected",0);
 		SCSQLHelper db = new SCSQLHelper(this);
 		db.getReadableDatabase();
-		satinstance = db.getSatInstance(Id);
+		
+		
+		//poor design, should not load entire list just to view
+		// this instance. 
+		list = db.getSatInstance();
+		satinstance = list.get(Id);
 		
 		b_deleteThis = (Button)findViewById(R.id.deletethis);
 		b_deleteThis.setOnClickListener(l_deleteThis);

@@ -28,6 +28,7 @@ package sat.save;
 public class SatInstance {
 	
 	private int id;
+	private int tableid;
     private String name = " instance ";
     private int userid;
     private double lat = 0;
@@ -39,9 +40,10 @@ public class SatInstance {
  
     public SatInstance(){}
  
-    public SatInstance(String name, int userid, double lat, double lng, String provider, float accuracy, double altitude, float bearing) {
+    public SatInstance(String name, int userid, double lat, double lng, String provider, float accuracy, double altitude, float bearing, int tableid) {
         super();
         this.name = name;
+        this.tableid = tableid;
         this.userid = userid;
         this.lat = lat;
         this.lng = lng;
@@ -61,6 +63,9 @@ public class SatInstance {
     
     public int getId(){
 		return id;
+    }
+    public int getTableId(){
+    	return tableid;
     }
     public String getName(){
 		return name;
@@ -93,7 +98,9 @@ public class SatInstance {
     public void setId(int id){
 		 this.id = id;
     }
-    
+    public void setTableId(int tableid){
+    	this.tableid = tableid;
+    }
     public void setName(String name){
 		 this.name = name;
     }

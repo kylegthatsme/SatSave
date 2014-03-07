@@ -70,7 +70,7 @@ public class SettingsActivity extends Activity {
 	private OnClickListener l_delete = new OnClickListener() {
 	    public void onClick(View v) {
 	    	
-	    	 setContentView(R.layout.info);
+	    	 
 	    	 satinstance = new SatInstance();
 	    	 db.deleteAll(satinstance);
 	    	 

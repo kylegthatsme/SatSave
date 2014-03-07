@@ -63,6 +63,7 @@ public class SCSQLHelper extends SQLiteOpenHelper {
     private static final String[] COLUMNS = {KEY_ID,KEY_NAME,KEY_USERID,KEY_LAT,KEY_LNG,KEY_PROVIDER,KEY_ACCURACY,KEY_ALTITUDE,KEY_BEARING};
     
     SatInstance satinstance;
+    int idSet = 0;
     
     public SCSQLHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);  
@@ -120,7 +121,6 @@ public class SCSQLHelper extends SQLiteOpenHelper {
 		// 4. close
 		db.close(); 
     }
-    
     public SatInstance getSatInstance(int id){
     	 
         // 1. get reference to readable DB
@@ -159,10 +159,12 @@ public class SCSQLHelper extends SQLiteOpenHelper {
         // 5. return book
         return satinstance;
     }	
-    
+    // this functions needs to be repaired so that it returns a list that has sequential id's    
     public List<SatInstance> getSatInstance() {
         List<SatInstance> satInstanceList = new LinkedList<SatInstance>();
   
+        idSet = 0;
+        
         // 1. build the query
         String query = "SELECT  * FROM " + TABLE_SAT;
   
@@ -175,7 +177,8 @@ public class SCSQLHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
             	 satinstance = new SatInstance();
-                 satinstance.setId(Integer.parseInt(cursor.getString(0)));
+                 satinstance.setTableId(Integer.parseInt(cursor.getString(0)));
+            	 satinstance.setId(idSet);
                  satinstance.setName(cursor.getString(1));
                  satinstance.setUserId(Integer.parseInt(cursor.getString(2)));
                  satinstance.setLat(Double.parseDouble(cursor.getString(3)));
@@ -187,6 +190,8 @@ public class SCSQLHelper extends SQLiteOpenHelper {
   
                 // Add instance
                 satInstanceList.add(satinstance);
+                idSet++;
+                
             } while (cursor.moveToNext());
         }
   
